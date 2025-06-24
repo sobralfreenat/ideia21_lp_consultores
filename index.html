@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎨 Análise de Cores Pantone TCX - Revolucione suas Tendências de Moda</title>
+    <meta name="description" content="Análise profissional de cores Pantone TCX para indústria da moda. Identifique tendências globais, compare com grandes marcas e otimize suas coleções em minutos.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎨</text></svg>">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+        
+        /* === HEADER/NAVBAR === */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(139, 106, 93, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 15px 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #A67C6A, #8B6A5D);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 800;
+            box-shadow: 0 4px 15px rgba(166, 124, 106, 0.3);
+        }
+        
+        .logo-text {
+            color: white;
+        }
+        
+        .logo-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 2px;
+        }
+        
+        .logo-subtitle {
+            font-size: 0.7rem;
+            opacity: 0.9;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+        
+        .nav-cta {
+            background: linear-gradient(135deg, #D4A574, #A67C6A);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(212, 165, 116, 0.3);
+        }
+        
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 165, 116, 0.4);
+        }
+
+        /* === HERO SECTION === */
+        .hero {
+            background: linear-gradient(135deg, #8B6A5D 0%, #A67C6A 50%, #D4A574 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .hero-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .hero-content .subtitle {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+            font-weight: 400;
+        }
+        
+        .hero-content .highlight {
+            background: rgba(255,255,255,0.2);
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 5px solid #FFD700;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .highlight h3 {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .highlight p {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.95rem;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+                 .btn-primary {
+             background: linear-gradient(135deg, #D4A574, #A67C6A);
+             color: white;
+             padding: 18px 35px;
+             border: none;
+             border-radius: 50px;
+             font-size: 1.1rem;
+             font-weight: 600;
+             cursor: pointer;
+             transition: all 0.3s ease;
+             text-decoration: none;
+             display: inline-block;
+             box-shadow: 0 8px 25px rgba(212, 165, 116, 0.3);
+         }
+         
+         .btn-primary:hover {
+             transform: translateY(-3px);
+             box-shadow: 0 12px 35px rgba(212, 165, 116, 0.4);
+         }
+        
+        .btn-secondary {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 18px 35px;
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            backdrop-filter: blur(10px);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.3);
+            border-color: rgba(255,255,255,0.5);
+            transform: translateY(-2px);
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            color: white;
+        }
+        
+                 .stat-number {
+             font-size: 2rem;
+             font-weight: 800;
+             display: block;
+             color: #D4A574;
+         }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 5px;
+        }
+        
+        .hero-visual {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .demo-interface {
+            background: rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        
+        .demo-header {
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .color-samples {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .color-sample {
+            height: 40px;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+            animation: colorPulse 3s ease-in-out infinite;
+        }
+        
+                 .color-sample:nth-child(1) { background: linear-gradient(45deg, #8B6A5D, #A67C6A); animation-delay: 0s; }
+         .color-sample:nth-child(2) { background: linear-gradient(45deg, #A67C6A, #D4A574); animation-delay: 0.5s; }
+         .color-sample:nth-child(3) { background: linear-gradient(45deg, #D4A574, #E6C399); animation-delay: 1s; }
+         .color-sample:nth-child(4) { background: linear-gradient(45deg, #B8967A, #8B6A5D); animation-delay: 1.5s; }
+        
+        @keyframes colorPulse {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.05); opacity: 1; }
+        }
+        
+        .demo-results {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 15px;
+            color: white;
+            font-size: 0.9rem;
+        }
+        
+        /* === BENEFITS SECTION === */
+        .benefits {
+            padding: 100px 0;
+            background: linear-gradient(180deg, #f8f9ff 0%, #ffffff 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 20px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #718096;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .benefit-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+                 .benefit-card::before {
+             content: '';
+             position: absolute;
+             top: 0;
+             left: 0;
+             width: 100%;
+             height: 4px;
+             background: linear-gradient(135deg, #8B6A5D, #A67C6A);
+         }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+        }
+        
+        .benefit-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .benefit-card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+        
+        .benefit-card p {
+            color: #718096;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .benefit-list {
+            list-style: none;
+        }
+        
+        .benefit-list li {
+            padding: 5px 0;
+            color: #4a5568;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .benefit-list li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+        }
+        
+                 /* === PRICING SECTION === */
+         .pricing {
+             padding: 100px 0;
+             background: linear-gradient(135deg, #8B6A5D 0%, #A67C6A 100%);
+             position: relative;
+         }
+        
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 80px;
+            color: white;
+        }
+        
+        .pricing-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .pricing-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+                 .pricing-card.featured {
+             transform: scale(1.05);
+             background: rgba(255,255,255,0.25);
+             border: 2px solid #D4A574;
+         }
+         
+         .pricing-card.featured::before {
+             content: '⭐ MAIS POPULAR';
+             position: absolute;
+             top: -15px;
+             left: 50%;
+             transform: translateX(-50%);
+             background: #D4A574;
+             color: white;
+             padding: 8px 20px;
+             border-radius: 20px;
+             font-size: 0.8rem;
+             font-weight: 600;
+         }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .plan-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 10px;
+        }
+        
+                 .plan-price {
+             font-size: 3rem;
+             font-weight: 800;
+             color: #D4A574;
+             margin-bottom: 5px;
+         }
+        
+        .plan-period {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 30px;
+        }
+        
+        .plan-features {
+            list-style: none;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+        
+        .plan-features li {
+            padding: 10px 0;
+            color: rgba(255,255,255,0.9);
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .plan-features li::before {
+            content: '✅';
+            position: absolute;
+            left: 0;
+        }
+        
+        .plan-cta {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 2px solid rgba(255,255,255,0.3);
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .plan-cta:hover {
+            background: rgba(255,255,255,0.3);
+            border-color: rgba(255,255,255,0.5);
+        }
+        
+                 .featured .plan-cta {
+             background: #D4A574;
+             color: white;
+             border-color: #D4A574;
+         }
+         
+         .featured .plan-cta:hover {
+             background: #C19760;
+             transform: translateY(-2px);
+         }
+        
+        /* === TESTIMONIALS === */
+        .testimonials {
+            padding: 100px 0;
+            background: #f8f9ff;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        
+                 .testimonial-card::before {
+             content: '"';
+             font-size: 4rem;
+             color: #A67C6A;
+             position: absolute;
+             top: 10px;
+             left: 20px;
+             font-family: serif;
+         }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 30px;
+            margin-top: 20px;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+                 .author-avatar {
+             width: 50px;
+             height: 50px;
+             border-radius: 50%;
+             background: linear-gradient(135deg, #A67C6A, #8B6A5D);
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             color: white;
+             font-weight: 600;
+         }
+        
+        .author-info h4 {
+            color: #2d3748;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+        
+        /* === CTA SECTION === */
+        .final-cta {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            text-align: center;
+            color: white;
+        }
+        
+        .final-cta h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .final-cta p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+                 .urgent-offer {
+             background: rgba(212, 165, 116, 0.2);
+             border: 2px solid #D4A574;
+             border-radius: 15px;
+             padding: 30px;
+             margin: 40px auto;
+             max-width: 500px;
+         }
+         
+         .urgent-offer h3 {
+             color: #D4A574;
+             margin-bottom: 15px;
+             font-size: 1.3rem;
+         }
+         
+         .countdown {
+             font-size: 1.5rem;
+             font-weight: 700;
+             color: #D4A574;
+             margin: 20px 0;
+         }
+        
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .pricing-card.featured {
+                transform: none;
+            }
+            
+            .benefits-grid,
+            .pricing-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* === ANIMATIONS === */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        /* === FLOATING ELEMENTS === */
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+        }
+        
+        .floating-element {
+            position: absolute;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-element:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .floating-element:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            top: 60%;
+            right: 10%;
+            animation-delay: 2s;
+        }
+        
+        .floating-element:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            top: 80%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            33% {
+                transform: translateY(-20px) rotate(120deg);
+            }
+            66% {
+                transform: translateY(-10px) rotate(240deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">🎨</div>
+                <div class="logo-text">
+                    <div class="logo-title">IDEIA21</div>
+                    <div class="logo-subtitle">Instituto de Design, Estilo, Imagem e Arte</div>
+                </div>
+            </div>
+            <a href="#pricing" class="nav-cta">Começar Agora</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="floating-elements">
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+            <div class="floating-element"></div>
+        </div>
+        
+        <div class="hero-container">
+            <div class="hero-content fade-in-up">
+                <h1> Revolucione Análises de <br>Tendências de Moda</h1>
+                <p class="subtitle">Análise profissional de cores Pantone TCX que identifica tendências globais, compara com grandes marcas e otimiza suas coleções em minutos, não semanas.</p>
+                
+                <div class="highlight">
+                    <h3>⚡ Análise Instantânea de Grandes Marcas</h3>
+                    <p>Compare automaticamente suas cores com Louis Vuitton, Chanel, Valentino e outras 10+ marcas internacionais. Receba insights estratégicos que levariam semanas para conseguir manualmente.</p>
+                </div>
+                
+                <div class="cta-buttons">
+                    <a href="#pricing" class="btn-primary">🚀 Começar Agora - R$ 2.500</a>
+                    <a href="#demo" class="btn-secondary">🎯 Ver Demonstração</a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">3min</span>
+                        <span class="stat-label">Análise Completa</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Precisão TCX</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Marcas Globais</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="demo-interface">
+                    <div class="demo-header">🔍 Análise em Tempo Real</div>
+                    <div class="color-samples">
+                        <div class="color-sample"></div>
+                        <div class="color-sample"></div>
+                        <div class="color-sample"></div>
+                        <div class="color-sample"></div>
+                    </div>
+                    <div class="demo-results">
+                        ✅ 23 códigos TCX identificados<br>
+                        🎯 5 tendências globais detectadas<br>
+                        💡 3 oportunidades estratégicas<br>
+                        📊 Relatório completo gerado
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" id="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Por que Escolher Nossa Análise TCX?</h2>
+                <p class="section-subtitle">Transforme sua estratégia de cores com tecnologia de ponta e inteligência de mercado</p>
+            </div>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <span class="benefit-icon">⚡</span>
+                    <h3>Velocidade Incomparável</h3>
+                    <p>Análise completa em 3 minutos que substitui semanas de pesquisa manual. Processe centenas de imagens instantaneamente.</p>
+                    <ul class="benefit-list">
+                        <li>Análise automática de cores dominantes</li>
+                        <li>Mapeamento preciso para códigos TCX</li>
+                        <li>Relatórios instantâneos</li>
+                        <li>Exportação em múltiplos formatos</li>
+                    </ul>
+                </div>
+                
+                <div class="benefit-card">
+                    <span class="benefit-icon">🌍</span>
+                    <h3>Inteligência de Mercado Global</h3>
+                    <p>Compare automaticamente com 10+ grandes marcas internacionais e receba insights estratégicos baseados em dados reais.</p>
+                    <ul class="benefit-list">
+                        <li>Louis Vuitton, Chanel, Valentino...</li>
+                        <li>Análise de influência por segmento</li>
+                        <li>Timing comercial otimizado</li>
+                        <li>Oportunidades de diferenciação</li>
+                    </ul>
+                </div>
+                
+                <div class="benefit-card">
+                    <span class="benefit-icon">📊</span>
+                    <h3>Relatórios Profissionais</h3>
+                    <p>Gráficos interativos, rankings detalhados e visualizações que impressionam clientes e facilitam tomadas de decisão.</p>
+                    <ul class="benefit-list">
+                        <li>Gráficos Plotly interativos</li>
+                        <li>Análise de formas geométricas</li>
+                        <li>Elementos de moda detalhados</li>
+                        <li>Mapas de calor de tendências</li>
+                    </ul>
+                </div>
+                
+                <div class="benefit-card">
+                    <span class="benefit-icon">💰</span>
+                    <h3>ROI Comprovado</h3>
+                    <p>Economize 70% do tempo em pesquisa, reduza 30% de apostas erradas e aumente 25% de assertividade em tendências.</p>
+                    <ul class="benefit-list">
+                        <li>-30% em apostas erradas de cor</li>
+                        <li>+25% de assertividade em tendências</li>
+                        <li>+15% em margem por melhor mix</li>
+                        <li>6 meses de antecipação vs. concorrência</li>
+                    </ul>
+                </div>
+                
+                <div class="benefit-card">
+                    <span class="benefit-icon">🎯</span>
+                    <h3>Precisão Técnica</h3>
+                    <p>Algoritmos avançados garantem mapeamento preciso para códigos Pantone TCX oficiais da indústria têxtil.</p>
+                    <ul class="benefit-list">
+                        <li>50+ códigos TCX mapeados</li>
+                        <li>Categorização inteligente</li>
+                        <li>Filtros por tipo de análise</li>
+                        <li>Frequência normalizada ou absoluta</li>
+                    </ul>
+                </div>
+                
+                <div class="benefit-card">
+                    <span class="benefit-icon">🚀</span>
+                    <h3>Escalabilidade Total</h3>
+                    <p>Processe de 1 a 1000+ imagens com a mesma facilidade. Sistema preparado para crescer com seu negócio.</p>
+                    <ul class="benefit-list">
+                        <li>Análise em lote ilimitada</li>
+                        <li>Interface responsiva</li>
+                        <li>Funciona offline</li>
+                        <li>Capacidade operacional transparente</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="pricing-header">
+                <h2 class="pricing-title">Planos que Cabem no seu Orçamento</h2>
+                <p class="pricing-subtitle">Escolha o plano ideal para o tamanho do seu projeto. Todos incluem análise completa TCX e relatórios profissionais.</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="plan-name">🎯 Básico</div>
+                    <div class="plan-price">R$ 1.500</div>
+                    <div class="plan-period">por projeto</div>
+                    <ul class="plan-features">
+                        <li>Até 10 imagens</li>
+                        <li>Análise de cores TCX</li>
+                        <li>Relatório básico</li>
+                        <li>Exportação CSV</li>
+                        <li>Suporte por email</li>
+                    </ul>
+                    <a href="#" class="plan-cta">Escolher Básico</a>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="plan-name">📊 Padrão</div>
+                    <div class="plan-price">R$ 2.500</div>
+                    <div class="plan-period">por projeto</div>
+                    <ul class="plan-features">
+                        <li>Até 20 imagens</li>
+                        <li>Análise completa TCX</li>
+                        <li>Tendências globais</li>
+                        <li>Insights estratégicos</li>
+                        <li>Relatórios interativos</li>
+                        <li>Comparativo de marcas</li>
+                        <li>Suporte prioritário</li>
+                    </ul>
+                    <a href="#" class="plan-cta">Começar Agora</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="plan-name">🏆 Premium</div>
+                    <div class="plan-price">R$ 5.000</div>
+                    <div class="plan-period">por projeto</div>
+                    <ul class="plan-features">
+                        <li>Até 50 imagens</li>
+                        <li>Análise ultra-detalhada</li>
+                        <li>Consultoria estratégica</li>
+                        <li>Análise de elementos de moda</li>
+                        <li>Formas geométricas</li>
+                        <li>Capacidade operacional</li>
+                        <li>Suporte dedicado</li>
+                    </ul>
+                    <a href="#" class="plan-cta">Escolher Premium</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="plan-name">🌍 Enterprise</div>
+                    <div class="plan-price">R$ 10.000+</div>
+                    <div class="plan-period">por projeto</div>
+                    <ul class="plan-features">
+                        <li>100+ imagens</li>
+                        <li>Análise multi-marca</li>
+                        <li>Estratégia personalizada</li>
+                        <li>Integração com sistemas</li>
+                        <li>Treinamento da equipe</li>
+                        <li>Dashboard executivo</li>
+                        <li>Suporte 24/7</li>
+                    </ul>
+                    <a href="#" class="plan-cta">Contatar Vendas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">O que Nossos Clientes Dizem</h2>
+                <p class="section-subtitle">Marcas que já transformaram suas estratégias de cor com nossa tecnologia</p>
+            </div>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Reduzimos 80% do tempo gasto em pesquisa de cores. O que levava 2 semanas, agora fazemos em 1 manhã. O ROI foi imenso!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MC</div>
+                        <div class="author-info">
+                            <h4>Maria Clara Santos</h4>
+                            <p>Diretora Criativa - Fashion Brand</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"A análise de tendências globais nos deu uma vantagem competitiva incrível. Conseguimos antecipar tendências que nossos concorrentes só descobriram 6 meses depois."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RS</div>
+                        <div class="author-info">
+                            <h4>Rafael Silva</h4>
+                            <p>Head de Produto - Grupo Têxtil</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Os relatórios impressionam nossos clientes e facilitam muito na hora de justificar decisões de cores para as coleções. Ferramenta indispensável!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AF</div>
+                        <div class="author-info">
+                            <h4>Ana Fernandes</h4>
+                            <p>Consultora de Moda - Studio Criativo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>🚀 Pronto para Revolucionar suas Cores?</h2>
+            <p>Junte-se a centenas de marcas que já transformaram suas estratégias de cor. Comece hoje mesmo e veja resultados em minutos.</p>
+            
+            <div class="urgent-offer">
+                <h3>⚡ Oferta Especial de Lançamento</h3>
+                <p>50% de desconto no primeiro projeto + bônus: análise gratuita de 5 imagens de teste</p>
+                <div class="countdown" id="countdown">⏰ Termina em: 23:59:45</div>
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary" style="font-size: 1.2rem; padding: 20px 40px;">🎯 Começar Agora - R$ 1.250 (50% OFF)</a>
+                <a href="#" class="btn-secondary" style="font-size: 1.1rem; padding: 18px 35px;">📞 Falar com Especialista</a>
+            </div>
+            
+            <p style="margin-top: 30px; opacity: 0.8; font-size: 0.9rem;">
+                ✅ Garantia de 30 dias | ✅ Suporte técnico incluso | ✅ Resultados comprovados
+            </p>
+        </div>
+    </section>
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            tomorrow.setHours(0, 0, 0, 0);
+            const distance = tomorrow - now;
+
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById('countdown').innerHTML = 
+                `⏰ Termina em: ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.benefit-card, .pricing-card, .testimonial-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+
+        console.log('🎨 Landing Page Carregada - Análise de Cores Pantone TCX');
+        console.log('🚀 Pronto para converter visitantes em clientes!');
+    </script>
+</body>
+</html>
